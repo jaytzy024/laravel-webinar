@@ -17,12 +17,20 @@ class SampleAccounts extends Seeder
     {
         // $faker = Faker::create(); // Create a Faker instance
 
-        // seeding admin
+        // seeding teacher data
         $teacher = User::create([
             'name' => 'Kevs404',
             'email' => 'admin@sample.com',
             'password' => Hash::make('12345'),
             'role' => 'teacher',
+        ]);
+        // seeding students data
+
+        $students = User::create([
+            'name' => 'Jay-ar',
+            'email' => 'students@sample.com',
+            'password' => Hash::make('12345'),
+            'role' => 'students',
         ]);
 
     }
