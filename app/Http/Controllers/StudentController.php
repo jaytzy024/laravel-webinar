@@ -35,17 +35,23 @@ class StudentController extends Controller
         $student = Students::findOrFail($id);
         return view('edit', compact('student'));
     }
-
     public function update(Request $request, $id)
     {
         $student = Students::findOrFail($id);
-        $student->student_id = $request->input('student_id');
-        $student->first_name = $request->input('first_name');
-        $student->last_name = $request->input('last_name');
-        $student->course = $request->input('course');
-        $student->save();
-        return redirect()->route('index');
+        $student->update($request->all());
+        return redirect()->route('index')->with('success', 'Student updated successfully.');
     }
+
+    // public function update(Request $request, $id)
+    // {
+    //     $student = Students::findOrFail($id);
+    //     $student->student_id = $request->input('student_id');
+    //     $student->first_name = $request->input('first_name');
+    //     $student->last_name = $request->input('last_name');
+    //     $student->course = $request->input('course');
+    //     $student->save();
+    //     return redirect()->route('index');
+    // }
 
     public function destroy($id)
     {

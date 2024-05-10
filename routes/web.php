@@ -29,12 +29,18 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
+// students table
 Route::get('/students', [StudentController::class, 'student_list'])->name('index');
+
+// add students
 Route::get('/students/create', [StudentController::class, 'create'])->name('students.create');
 Route::post('/students', [StudentController::class, 'store'])->name('students.store');
+
+// update students
 Route::get('/students/{id}/edit', [StudentController::class, 'edit'])->name('students.edit');
 Route::put('/students/{id}', [StudentController::class, 'update'])->name('students.update');
+
+// delete students
 Route::delete('/students/{id}', [StudentController::class, 'destroy'])->name('students.destroy');
 
 require __DIR__.'/auth.php';

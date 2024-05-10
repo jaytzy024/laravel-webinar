@@ -28,11 +28,21 @@
                 <input type="text" id="last_name" name="last_name"
                     class="mt-1 p-2 rounded-md border border-gray-400 w-full">
             </div>
-            <div class="mb-4">
+            {{-- <div class="mb-4">
                 <label for="course" class="block text-sm font-medium text-gray-700">Course:</label>
                 <input type="text" id="course" name="course"
                     class="mt-1 p-2 rounded-md border border-gray-400 w-full">
+            </div> --}}
+
+            <div class="mb-4">
+                <select id="course" name="course" class="mt-1 p-2 rounded-md border border-gray-400 w-full">
+                    <option value="BSIS">BSIS</option>
+                    <option value="BSIT">BSIT</option>
+                    <option value="BSCS">BSCS</option>
+                    <option value="BSEMC">BSEMC</option>
+                </select>
             </div>
+
             <button type="submit"
                 class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 w-full mt-2">Create</button>
         </form>

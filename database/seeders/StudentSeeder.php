@@ -19,5 +19,12 @@ class StudentSeeder extends Seeder
             'last_name' => 'Casoco',
             'course' => 'BSIS',
         ]);
+
+        $students = Students::create([
+            'student_id' => '20200283-N',
+            'first_name' => 'Kevs',
+            'last_name' => '404',
+            'course' => 'BSIT',
+        ]);
     }
 }
